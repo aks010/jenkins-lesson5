@@ -8,7 +8,7 @@ node('master') {
         printMessage('Running Pipeline')
         stage("Testing") {
           sh 'ls -la'
-            sh 'python3 test_functions.py'
+            sh 'python3 test-functions.py'
         }
         stage("Deployment") {
             if (env.BRANCH_NAME == 'master') {
